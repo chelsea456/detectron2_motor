@@ -10,23 +10,23 @@ import pickle
 
 from utlis import *
 
-config_file_path = "COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml"
-checkpoint_url = "COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml"
+config_file_path = "COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x.yaml"
+checkpoint_url = "COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x.yaml"
 
-output_dir = "./output/object_detection"
+output_dir = "/content/drive/MyDrive/vstech/1"
 num_classes = 1
 
-device = "cpu"
+device = "cuda"
 
 train_dataset_name = "LP_train"
-train_images_path = "train"
-train_json_annot_path = "train.json"
+train_images_path = "/content/drive/MyDrive/image_test/train"
+train_json_annot_path = "/content/drive/MyDrive/image_test/train.json"
 
 test_dataset_name = "LP_test"
-test_images_path = "test"
-test_json_annot_path = "test.json"
+test_images_path = "/content/drive/MyDrive/image_test/test"
+test_json_annot_path = "/content/drive/MyDrive/image_test/test.json"
 
-cfg_save_path = "OD_cfg.pickle"
+cfg_save_path = "IS_COVER_MASK_cfg.pickle"
 
 ########################
 register_coco_instances(name= train_dataset_name, metadata={},
